@@ -2,7 +2,7 @@ const FETCH_URL = "https://www.chennaisuperkings.com/FGBE/quizzes_progress";
 const UPDATE_URL = "https://www.chennaisuperkings.com/fz/updatedContestsPoint";
 
 let start = Number.parseInt(prompt("Enter Start Quiz Number", 0));
-let end = start + 5;
+let end = start + 30;
 let updated_codes = "";
 console.log(start, end);
 
