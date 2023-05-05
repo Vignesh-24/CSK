@@ -42,7 +42,7 @@ async function startProcess() {
       updated_codes+=payload.contestCode+","
       await sleepNow(5000);
     }
-    alert(updated_codes + " Updated"); 
+    alert(updated_codes + " Updated...!!! Next Start Number:", end ); 
   } catch (error) {
     console.log(error);
   }
