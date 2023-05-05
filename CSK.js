@@ -6,7 +6,7 @@ let end = start + 30;
 let updated_codes = "";
 console.log(start, end);
 
-const POINTS_LIST = [12100, 12200, 12300];
+const POINTS_LIST = [12200, 12200, 12300];
 const BOOST_POINTS = [12300, 12400, 12500]
 
 
@@ -18,6 +18,7 @@ async function startProcess() {
     credentials: 'same-origin'
   };
   let payload = {
+    "userId": "",
     "points": 0,
     "contestCode": ""
   };
