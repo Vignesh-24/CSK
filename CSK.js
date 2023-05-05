@@ -30,7 +30,7 @@ async function startProcess() {
       let code = contest_codes[index];
       payload.contestCode = code;
       let random = Math.floor(Math.random() * 3);
-      console.log(random);
+      
       if(index % 10 > 7) {
         payload.points = BOOST_POINTS[random];
       } else {
