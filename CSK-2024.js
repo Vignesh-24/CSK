@@ -31,7 +31,7 @@ var quiz_data = quizzes.data.contestEntity.map(
 async function startQuiz(index) {
     var cur_quiz = quiz_data[index];
     var create_user_payload = {
-        userId: "l0cL6iV/H+Y9DdsAgdyREA==",
+        userId: "<<userid>>",
         quizCode: cur_quiz.code,
         quizId: cur_quiz.id,
         lastQuestionAnswer: 0,
@@ -57,7 +57,7 @@ async function startQuiz(index) {
 
     for(let i=0; i < answerKey.length; i++) {
         var payload = {
-            userId: "l0cL6iV/H+Y9DdsAgdyREA==",
+            userId: "<<userid>>",
             answerId: answerKey[i].answerId.toString(),
             questionId: answerKey[i].questionId,
             quizCode: cur_quiz.code,
