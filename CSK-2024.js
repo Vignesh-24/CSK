@@ -1,6 +1,7 @@
 const FETCH_URL = "https://www.chennaisuperkings.com/SBBE/contestGroup/getContestGroupById/1";
 const UPDATE_URL = "https://www.chennaisuperkings.com/SBBE/quizAnswer/updateContestPoint";
 const CREATE_URL = "https://www.chennaisuperkings.com/SBBE/quizTotalAnswer/createUserData";
+const CREATE_LEADERBOARD_URL = "https://www.chennaisuperkings.com/SBBE/userLeaderboard/createLeaderboardUser";
 
 Object.defineProperty(Date.prototype, 'YYYYMMDDHHMMSS', {
     value: function() {
@@ -27,6 +28,26 @@ var quiz_data = quizzes.data.contestEntity.map(
         .find(ele => ele.isCorrectAnswer == 'Y').contestAnsId}))
     })
 );
+
+var create_leaderboard_user_payload = {
+        userId: "<<userid>>",
+        contestCount: 1,
+        mobile: "9176323705",
+        userName: "Vignesh",
+        season: "2024",
+        points: 2500000,
+        tablePosition: 0
+    }
+
+var header_data = {
+        "Content-Type": "application/json",
+        "Content-Length": 256,
+        "Accept": "application/json, text/plain, */*"
+      }
+var create_leader_user = await fetch(CREATE_LEADERBOARD_URL, 
+        {method:"POST", body: JSON.stringify(create_user_payload), credential: 'same-origin', headers: header_data});
+    var res = await create_leader_user.json();
+    console.log(res);
 
 async function startQuiz(index) {
     var cur_quiz = quiz_data[index];
